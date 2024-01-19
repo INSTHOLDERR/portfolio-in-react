@@ -458,7 +458,7 @@ const App = () => {
                 <li className="icon instagram">
                   <span className="tooltip">Instagram</span>
                   <span>
-                    <a href="https://www.instagram.com/nikhil.__p?igsh=azhvcGd0dGZteXFj" className="icon-alink">
+                    <a href="https://www.instagram.com/nikhilpramod.__?igsh=azhvcGd0dGZteXFj" className="icon-alink">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </span>
