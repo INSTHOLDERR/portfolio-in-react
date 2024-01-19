@@ -60,7 +60,7 @@ const App = () => {
             <div className="col-lg-6 col-md-6 col-sm-6"></div>
           </div>
         </div>
-      </section>
+      </section> 
 
 
       <section id="section_2">
@@ -320,10 +320,10 @@ const App = () => {
           </div>
 
         </div>
-      </section>
+      </section> 
 
 
-      <section id="section_3">
+       <section id="section_3">
         <div className="contaner-fluid">
           <div className="row">
             <div className="col-lg-6 col-md-12 col-sm-12"> </div>
@@ -407,10 +407,10 @@ const App = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
 
 
-      <section id="section_4">
+       <section id="section_4">
         <div className="container-fluid">
           <div className="row">
             <div className="about-top col-lg-6 col-md-12 col-sm-12">
@@ -458,7 +458,7 @@ const App = () => {
                 <li className="icon instagram">
                   <span className="tooltip">Instagram</span>
                   <span>
-                    <a href="https://www.instagram.com/nikhilpramod.__?igsh=azhvcGd0dGZteXFj" className="icon-alink">
+                    <a href="https://www.instagram.com/nikhilpramod.___?igsh=azhvcGd0dGZteXFj" className="icon-alink">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </span>
@@ -494,7 +494,7 @@ const App = () => {
 
 
         </div>
-      </section>
+      </section> 
 
 
       <div className="container-fluid">
@@ -517,7 +517,7 @@ const App = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
 
     </div>
