@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faWhatsapp, faTwitter, faInstagram, faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -81,7 +81,7 @@ const App = () => {
             <div className="col-lg-6 col-md-12 col-sm-12"></div>
           </div>
 
-          <div className="row" style={{ marginBottom: '60px' }}>
+          <div className="row about-main" >
             <div className="about-bottom-left col-lg-7 col-md-12 col-sm-12">
               <h2 className="about-bottom-left-heading">ABOUT ME</h2>
               <p className="about-bottom-left-paragraph">I am a self-learner, keeping myself updated on the latest technologies
