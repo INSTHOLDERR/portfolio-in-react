@@ -25,12 +25,14 @@ const App = () => {
 
 
   return (
-    <div className="contaner-fluid">
+
+
+    <div className="contaner-fluid" >
 
 
    
-      <section id="section_1">
-        <div className="navv">
+      <section id="section_1" >
+        <div className="navv" >
           <div className="row">
             <header className="headerr">
               <a href="#" className="logo">NIKHIL</a>
@@ -50,14 +52,14 @@ const App = () => {
             </header>
           </div>
 
-          <div className="nav-bottom row">
+          <div className="nav-bottom row" >
             <div className="nav-bottom-left col-lg-6 col-md-6 col-sm-6">
               <h1 className="name-a">Hello! I'm</h1>
               <h2 className="name-b">NIKHIL P</h2>
               <h4 className="name-c">WEB DEVELOPER</h4>
               <p className='name-d'>I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-6"></div>
+            <div className="col-lg-6 col-md-6 col-sm-6" ></div>
           </div>
         </div>
       </section> 
@@ -323,7 +325,7 @@ const App = () => {
       </section> 
 
 
-       <section id="section_3">
+       <section id="section_3" >
         <div className="contaner-fluid">
           <div className="row">
             <div className="col-lg-6 col-md-12 col-sm-12"> </div>
@@ -497,7 +499,7 @@ const App = () => {
       </section> 
 
 
-      <div className="container-fluid">
+      <div className="container-fluid" >
         <div className="row">
           <div className="footer col-lg-12 col-md-12 col-sm-12">
             <div id="animation">
@@ -521,6 +523,8 @@ const App = () => {
 
 
     </div>
+
+ 
 
   );
 };
