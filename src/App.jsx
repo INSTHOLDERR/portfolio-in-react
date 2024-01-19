@@ -73,7 +73,7 @@ const App = () => {
                     <h1 className="about-heading">MY STORY</h1>
                   </div>
                   <div className="col-lg-5 col-md-5 col-sm-5">
-                    <img className="about-image" src="/public/me.jpg" alt="about" />
+                    <img className="about-image" src="/me.jpg" alt="about" />
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const App = () => {
             </div>
 
             <div className="about-bottom-right col-lg-5 col-md-12 col-sm-12">
-              <img className="about-bottom-right-image" src="/public/program1.jpg" alt="" />
+              <img className="about-bottom-right-image" src="/program1.jpg" alt="" />
             </div>
           </div>
 
@@ -164,7 +164,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/letter-c.png" alt="" />
+                    <img className="skill-image" src="/letter-c.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">C</h1>
@@ -177,7 +177,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/c-.png" alt="" />
+                    <img className="skill-image" src="/c-.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">C++</h1>
@@ -190,7 +190,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/java.png" alt="" />
+                    <img className="skill-image" src="/java.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">JAVA</h1>
@@ -203,7 +203,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/java-script.png" alt="" />
+                    <img className="skill-image" src="/java-script.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">JAVASCRIPT</h1>
@@ -222,7 +222,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/html-5.png" alt="" />
+                    <img className="skill-image" src="/html-5.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">HTML</h1>
@@ -235,7 +235,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/css-3.png" alt="" />
+                    <img className="skill-image" src="/css-3.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">CSS</h1>
@@ -248,7 +248,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/node-js.png" alt="" />
+                    <img className="skill-image" src="/node-js.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">NODE JS</h1>
@@ -264,7 +264,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-5 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/express.png" alt="" />
+                    <img className="skill-image" src="/express.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-7 col-md-6 col-sm-6">
                     <h1 className="skill-text">EXPRESS JS</h1>
@@ -277,7 +277,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-5 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/mongodb.png" alt="" />
+                    <img className="skill-image" src="/mongodb.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-7 col-md-6 col-sm-6">
                     <h1 className="skill-text">MONGO DB</h1>
@@ -290,7 +290,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/react(1).png" alt="" />
+                    <img className="skill-image" src="/react(1).png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">REACT</h1>
@@ -309,7 +309,7 @@ const App = () => {
               <div className="skill">
                 <div className="row">
                   <div className="skill-left col-lg-6 col-md-6 col-sm-6">
-                    <img className="skill-image" src="/public/git.png" alt="" />
+                    <img className="skill-image" src="/git.png" alt="" />
                   </div>
                   <div className=" skill-right col-lg-6 col-md-6 col-sm-6">
                     <h1 className="skill-text">GIT</h1>
@@ -332,7 +332,7 @@ const App = () => {
               <div className="project-top-right">
                 <div className="row">
                   <div className="col-lg-5 col-md-5 col-sm-5">
-                    <img className="project-image" src="/public/projects.jpg" alt="project" />
+                    <img className="project-image" src="/projects.jpg" alt="project" />
                   </div>
                   <div className="col-lg-7 col-md-7 col-sm-7">
                     <h1 className="project-heading">PROJECTS</h1>
@@ -420,7 +420,7 @@ const App = () => {
                     <h1 className="about-heading">SAY HI</h1>
                   </div>
                   <div className="col-lg-5 col-md-5 col-sm-5">
-                    <img className="about-image" src="/public/sayhi.jpg" alt="about" />
+                    <img className="about-image" src="/sayhi.jpg" alt="about" />
                   </div>
                 </div>
               </div>
