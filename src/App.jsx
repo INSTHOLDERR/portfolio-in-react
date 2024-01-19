@@ -30,7 +30,7 @@ const App = () => {
 
    
       <section id="section_1">
-        <div className="navv ">
+        <div className="navv">
           <div className="row">
             <header className="headerr">
               <a href="#" className="logo">NIKHIL</a>
