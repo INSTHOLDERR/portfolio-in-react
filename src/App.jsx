@@ -27,7 +27,7 @@ const App = () => {
   return (
 
 
-    <div className="contaner-fluid" >
+    <div className='main-page'>
 
 
    
