@@ -10,9 +10,10 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div id='home'>
+  
       <nav id="desktop-nav">
-        <div className="logo">Nikhil P</div>
+        <div className="logo"><a href="#home">Nikhil P</a></div>
         <div>
           <ul className="nav-links">
             <li><a href="#about">About</a></li>
@@ -38,6 +39,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
+     
     </div>
   );
 }
