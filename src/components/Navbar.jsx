@@ -23,7 +23,7 @@ function Navbar() {
         </div>
       </nav>
       <nav id="hamburger-nav">
-        <div className="logo">John Doe</div>
+        <div className="logo">Nikhil P</div>
         <div className="hamburger-menu">
           <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span></span>

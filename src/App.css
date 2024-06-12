@@ -172,7 +172,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: auto;
 }
 
 .section__pic-container {
@@ -439,7 +439,7 @@ footer p {
 
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 6rem;
   }
   .about-containers {
@@ -492,7 +492,7 @@ footer p {
     height: auto;
   }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
   article {
@@ -585,7 +585,7 @@ footer p {
   }
   #contact {
     
-    height: 70vh;
+    height: auto;
   }
   
 }
