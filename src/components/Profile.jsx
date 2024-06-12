@@ -12,7 +12,7 @@ function Profile() {
         <h1 className="title">Nikhil P</h1>
         <p className="section__text__p2">Web Developer</p>
         <div className="btn-container">
-          <button className="btn btn-color-2" onClick={() => window.open('./assets/resume-example.pdf')}>
+          <button className="btn btn-color-2" onClick={() => window.open('./assets/Nikhil P.pdf')}>
             Download CV
           </button>
         </div>
