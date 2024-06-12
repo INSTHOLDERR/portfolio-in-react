@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebookF, faWhatsapp, faTwitter, faInstagram, faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faWhatsapp, faTwitter, faInstagram, faGithub, faLinkedin, faYoutube,faGoogle } from '@fortawesome/free-brands-svg-icons';
 import Typed from "typed.js";
 import '../App.css';
 
@@ -15,14 +15,22 @@ function Contact() {
       <div className="contact-info-upper-container">
       <div className="iconss">
               <ul className="wrapper">
-                <li className="icon facebook">
+                {/* <li className="icon facebook">
                   <span className="tooltip">Facebook</span>
                   <span>
                     <a href="https://www.facebook.com/nikhil.pramod.946?mibextid=2JQ9oc" className="icon-alink">
                       <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                   </span>
-                </li>
+                </li> */}
+                <li className="icon gmail">
+        <span className="tooltip">Gmail</span>
+        <span>
+          <a href="mailto:nikhilpramod425@gmail.com" className="icon-alink">
+            <FontAwesomeIcon icon={faGoogle} />
+          </a>
+        </span>
+      </li>
                 <li className="icon whatsapp">
                   <span className="tooltip">Whatsapp</span>
                   <span>
@@ -31,22 +39,22 @@ function Contact() {
                     </a>
                   </span>
                 </li>
-                <li className="icon twitter">
+                {/* <li className="icon twitter">
                   <span className="tooltip">Twitter</span>
                   <span>
                     <a href="https://twitter.com/INstholder?t=_dg1Unt3cl8M9Oc7HHIJnw&s=09" className="icon-alink">
                       <FontAwesomeIcon icon={faTwitter} />
                     </a>
                   </span>
-                </li>
-                <li className="icon instagram">
+                </li> */}
+                {/* <li className="icon instagram">
                   <span className="tooltip">Instagram</span>
                   <span>
                     <a href="https://www.instagram.com/nikhilpramod.___?igsh=azhvcGd0dGZteXFj" className="icon-alink">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </span>
-                </li>
+                </li> */}
                 <li className="icon github">
                   <span className="tooltip">Github</span>
                   <span>
@@ -63,14 +71,14 @@ function Contact() {
                     </a>
                   </span>
                 </li>
-                <li className="icon youtube">
+                {/* <li className="icon youtube">
                   <span className="tooltip">Youtube</span>
                   <span>
                     <a href="https://www.youtube.com/@instholder" className="icon-alink">
                       <FontAwesomeIcon icon={faYoutube} />
                     </a>
                   </span>
-                </li>
+                </li> */}
               </ul>
             </div>
       </div>
