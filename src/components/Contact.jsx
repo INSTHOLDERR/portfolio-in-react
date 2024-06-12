@@ -58,7 +58,7 @@ function Contact() {
                 <li className="icon linkedin">
                   <span className="tooltip">Linkedin</span>
                   <span>
-                    <a className="icon-alink" href="https://www.linkedin.com/in/nikhil-pramod-07b51022a">
+                    <a className="icon-alink" href="https://www.linkedin.com/in/nikhil-p-07b51022a/">
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </span>
