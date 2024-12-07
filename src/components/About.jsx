@@ -17,7 +17,11 @@ function About() {
               <h3>Education</h3>
               <p>MERN STACK DEVELOPMENT<br />SYNNEFO SOLUTIONS ,KOCHI</p>
             </div>
-           
+            <div className="details-container">
+              <img src="../assets/education.png" alt="Education icon" className="icon" />
+              <h3>Education</h3>
+              <p>MERN STACK DEVELOPMENT<br />BROTOTYPE ,BENGALURU</p>
+            </div>
           </div>
           <div className="text-container">
             <p>
