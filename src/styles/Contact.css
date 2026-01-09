@@ -1,0 +1,346 @@
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+/* Social Icons */
+.iconss {
+  display: flex;
+  height: auto;
+  width: auto;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+}
+
+.wrapper {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-left: 0;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: iconPop 0.5s ease-out backwards;
+}
+
+@keyframes iconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Stagger icon animations */
+.wrapper .icon:nth-child(1) { animation-delay: 0.05s; }
+.wrapper .icon:nth-child(2) { animation-delay: 0.1s; }
+.wrapper .icon:nth-child(3) { animation-delay: 0.15s; }
+.wrapper .icon:nth-child(4) { animation-delay: 0.2s; }
+.wrapper .icon:nth-child(5) { animation-delay: 0.25s; }
+.wrapper .icon:nth-child(6) { animation-delay: 0.3s; }
+
+.wrapper .icon:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  white-space: nowrap;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon hover colors with smooth transitions */
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #075e54;
+  color: #ffffff;
+}
+
+.wrapper .gmail:hover,
+.wrapper .gmail:hover .tooltip,
+.wrapper .gmail:hover .tooltip::before {
+  background: #b82d07;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0072b1;
+  color: #ffffff;
+}
+
+.wrapper .leetcode:hover,
+.wrapper .leetcode:hover .tooltip,
+.wrapper .leetcode:hover .tooltip::before {
+  background: #c98a0c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.icon-alink {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.icon-alink:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.custom-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.icon:hover .custom-icon {
+  transform: rotate(180deg);
+  filter: brightness(1.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .wrapper .icon {
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+    margin: 8px;
+    font-size: 16px;
+    animation: iconPop 0.4s ease-out backwards;
+  }
+  
+  .wrapper .icon:hover {
+    transform: translateY(-6px) scale(1.06);
+  }
+  
+  .custom-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-info-upper-container {
+    animation: fadeInUp 0.6s ease-out 0.1s backwards;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  
+  .contact-info-upper-container {
+    flex-wrap: wrap;
+    animation: fadeIn 0.5s ease-out backwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .contact-info-container {
+    margin: 0;
+  }
+  
+  .contact-info-container p {
+    font-size: 1rem;
+  }
+  
+  .wrapper .icon {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    margin: 7px;
+    font-size: 15px;
+  }
+  
+  .wrapper .icon:hover {
+    transform: translateY(-4px) scale(1.05);
+  }
+  
+  .wrapper .tooltip {
+    font-size: 13px;
+    top: -40px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #contact {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .iconss {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 513px) {
+  .wrapper .icon {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  .custom-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Simplify stagger on small mobile */
+  .wrapper .icon {
+    animation-delay: 0.05s;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper .icon {
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+    margin: 4px;
+    font-size: 14px;
+  }
+  
+  .wrapper .icon:hover {
+    transform: translateY(-3px) scale(1.03);
+  }
+  
+  .wrapper .tooltip {
+    font-size: 12px;
+    padding: 4px 6px;
+    top: -38px;
+  }
+  
+  .custom-icon {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .icon:hover .custom-icon {
+    transform: rotate(90deg);
+  }
+}

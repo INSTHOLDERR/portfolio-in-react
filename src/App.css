@@ -1,16 +1,17 @@
-/* GENERAL */
+/* ==================== Global.css ==================== */
+/* Place this in src/styles/Global.css */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -20,30 +21,9 @@ p {
   color: rgb(85, 85, 85);
 }
 
-/* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
-}
-
-/* DESKTOP NAV */
-
-nav,
-.nav-links {
-  display: flex;
-}
-
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
-.nav-links {
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
 }
 
 a {
@@ -59,97 +39,13 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
-.logo {
-  font-size: 2rem;
-  cursor: pointer;
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.logo:hover {
-  cursor: default;
-}
-
-/* HAMBURGER MENU */
-
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links.open {
-  max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-/* SECTIONS */
-
+/* Common Section Styles */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -160,45 +56,13 @@ section {
 
 .section-container {
   display: flex;
-}
-
-/* PROFILE SECTION */
-
-
-.self{
-  border-radius: 50%;
-}
-
-#profile {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: auto;
-}
-
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-.section__text {
-  align-self: center;
-  text-align: center;
-}
-
-.section__text p {
-  font-weight: 600;
+  gap: 4rem;
+  height: 80%;
 }
 
 .section__text__p1 {
   text-align: center;
-}
-
-.section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .title {
@@ -206,22 +70,30 @@ section {
   text-align: center;
 }
 
-#socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-/* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
+/* Common Containers */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
 
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* Common Button Styles */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -264,29 +136,157 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
+
+/* ==================== Navbar.css ==================== */
+/* Place this in src/styles/Navbar.css */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* Hamburger Menu */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+
+/* ==================== Profile.css ==================== */
+/* Place this in src/styles/Profile.css */
+
+.self {
+  border-radius: 50%;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: auto;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
+
+/* ==================== About.css ==================== */
+/* Place this in src/styles/About.css */
 
 #about {
   position: relative;
 }
 
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-}
-
-.about-containers,
-.about-details-container {
   display: flex;
 }
 
@@ -300,28 +300,13 @@ section {
   bottom: 2.5rem;
 }
 
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
+.text-container {
+  margin-top: 1rem;
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-/* EXPERIENCE SECTION */
+/* ==================== Experience.css ==================== */
+/* Place this in src/styles/Experience.css */
 
 #experience {
   position: relative;
@@ -361,7 +346,9 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
+
+/* ==================== Projects.css ==================== */
+/* Place this in src/styles/Projects.css */
 
 #projects {
   position: relative;
@@ -389,7 +376,9 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
+
+/* ==================== Contact.css ==================== */
+/* Place this in src/styles/Contact.css */
 
 #contact {
   display: flex;
@@ -401,14 +390,12 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  
 }
 
 .contact-info-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 0.5rem;
   margin: 1rem;
 }
@@ -421,9 +408,131 @@ article .icon {
   cursor: default;
 }
 
+/* Social Icons */
+.iconss {
+  display: flex;
+  height: auto;
+  width: auto;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+}
+
+.wrapper {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-left: 0;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 0;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #075e54;
+  color: #ffffff;
+}
+
+.wrapper .gmail:hover,
+.wrapper .gmail:hover .tooltip,
+.wrapper .gmail:hover .tooltip::before {
+  background: #b82d07;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0072b1;
+  color: #ffffff;
+}
+
+.wrapper .leetcode:hover,
+.wrapper .leetcode:hover .tooltip,
+.wrapper .leetcode:hover .tooltip::before {
+  background: #c98a0c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.icon-alink {
+  color: black;
+}
+
+.icon-alink:hover {
+  color: white;
+}
 
 
-/* FOOTER SECTION */
+/* ==================== Footer.css ==================== */
+/* Place this in src/styles/Footer.css */
 
 footer {
   height: auto;
@@ -435,8 +544,8 @@ footer p {
 }
 
 
-
-
+/* ==================== Responsive.css ==================== */
+/* Place this in src/styles/Responsive.css */
 
 @media screen and (max-width: 1400px) {
   #profile {
@@ -542,218 +651,31 @@ footer p {
   }
 }
 
-
-
-
-
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-
-
-*:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.iconss {
-  display: flex;
-  /* background-color: #0072b1; */
-  height: auto;
-  width: auto;
-  font-family: "Poppins", sans-serif;
-  place-items: center;
-}
-
-.wrapper {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  padding-left: -10px;
-
-}
-
 @media (max-width: 560px) {
   .wrapper {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
     gap: 10px;
     list-style: none;
     align-items: center;
     padding-left: 0;
   }
   #contact {
-    
     height: auto;
   }
-  
 }
 
-
-@media(max-width:550px) {
+@media (max-width: 550px) {
   .wrapper {
     padding: 0%;
     margin: 0%;
   }
-
   .iconss {
     height: auto;
   }
 }
 
-@media(max-width:513px) {
+@media (max-width: 513px) {
   .wrapper .icon {
     margin: 5px;
     padding: 0%;
   }
 }
-
-.wrapper .icon {
-  position: relative;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-@media(max-width:513px) {
-  .wrapper .icon {
-    margin: 5px;
-    padding: 0%;
-  }
-}
-
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #ffffff;
-  bottom: -3px;
-  left: 0;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* .wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
-  color: #ffffff;
-} */
-
-.wrapper .whatsapp:hover,
-.wrapper .whatsapp:hover .tooltip,
-.wrapper .whatsapp:hover .tooltip::before {
-  background: #075e54;
-  color: #ffffff;
-}
-
-
-
-.wrapper .gmail:hover,
-.wrapper .gmail:hover .tooltip,
-.wrapper .gmail:hover .tooltip::before {
-  background: #b82d07;
-  color: #ffffff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1DA1F2;
-  color: #ffffff;
-}
-
-/* .wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #e440a5;
-  color: #ffffff;
-} */
-
-.wrapper .linkedin:hover,
-.wrapper .linkedin:hover .tooltip,
-.wrapper .linkedin:hover .tooltip::before {
-  background: #0072b1;
-  color: #ffffff;
-}
-
-.wrapper .leetcode:hover,
-.wrapper .leetcode:hover .tooltip,
-.wrapper .leetcode:hover .tooltip::before {
-  background: #c98a0c;
-  color: #ffffff;
-}
-
-
-
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-  background: #333333;
-  color: #ffffff;
-}
-
-/* .wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-  background: #CD201F;
-  color: #ffffff;
-} */
-
-
-/* footer-bottom*/
-
-
-.icon-alink {
-  color: black;
-}
-
-.icon-alink:hover {
-  color: white;
-}
-
-
-
-

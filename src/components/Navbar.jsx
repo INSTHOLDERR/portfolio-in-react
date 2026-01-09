@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import '../App.css';
+import '../styles/Navbar.css';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +10,6 @@ function Navbar() {
 
   return (
     <div id='home'>
-  
       <nav id="desktop-nav">
         <div className="logo"><a href="#home">Nikhil P</a></div>
         <div>
@@ -33,13 +31,12 @@ function Navbar() {
           </div>
           <div className={`menu-links ${menuOpen ? 'open' : ''}`}>
             <li><a href="#about" onClick={toggleMenu}>About</a></li>
-            <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+            <li><a href="#experience" onClick={toggleMenu}>Skills</a></li>
             <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
             <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
           </div>
         </div>
       </nav>
-     
     </div>
   );
 }

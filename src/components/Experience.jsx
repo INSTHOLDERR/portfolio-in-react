@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../styles/Experience.css';
 
 function Experience() {
   return (
@@ -12,43 +12,39 @@ function Experience() {
             <h2 className="experience-sub-title">Frontend Development</h2>
             <div className="article-container">
               <article>
-                <img src="../html-5.png" alt="Experience icon" className="icon" />
+                <img src="../html-5.png" alt="HTML icon" className="icon" />
                 <div>
                   <h3>HTML</h3>
                 </div>
               </article>
               <article>
-                <img src="../css-3.png" alt="Experience icon" className="icon" />
+                <img src="../css-3.png" alt="CSS icon" className="icon" />
                 <div>
                   <h3>CSS</h3>
-                 
                 </div>
               </article>
               <article>
-                <img src="../java-script.png" alt="Experience icon" className="icon" />
+                <img src="../java-script.png" alt="JavaScript icon" className="icon" />
                 <div>
                   <h3>JavaScript</h3>
                 </div>
               </article>
               <article>
-                <img src="../react(1).png" alt="Experience icon" className="icon" />
+                <img src="../react(1).png" alt="React icon" className="icon" />
                 <div>
                   <h3>React JS</h3>
-         
                 </div>
               </article>
               <article>
-                <img src="../tailwind-css.png" alt="Experience icon" className="icon" />
+                <img src="../tailwind-css.png" alt="Tailwind icon" className="icon" />
                 <div>
                   <h3>Tailwind CSS</h3>
-          
                 </div>
               </article>
               <article>
-                <img src="../bootstrap.png" alt="Experience icon" className="icon" />
+                <img src="../bootstrap.png" alt="Bootstrap icon" className="icon" />
                 <div>
                   <h3>Bootstrap</h3>
-         
                 </div>
               </article>
             </div>
@@ -57,74 +53,60 @@ function Experience() {
             <h2 className="experience-sub-title">Backend Development</h2>
             <div className="article-container">
               <article>
-              <img src="../node-js.png" alt="Experience icon" className="icon" />
+                <img src="../node-js.png" alt="Node JS icon" className="icon" />
                 <div>
                   <h3>Node JS</h3>
-                
                 </div>
               </article>
               <article>
-                <img src="../express.png" alt="Experience icon" className="icon" />
+                <img src="../express.png" alt="Express icon" className="icon" />
                 <div>
                   <h3>Express JS</h3>
-                
                 </div>
               </article>
               <article>
-                <img src="../mongodb.png" alt="Experience icon" className="icon" />
+                <img src="../mongodb.png" alt="MongoDB icon" className="icon" />
                 <div>
                   <h3>MongoDB</h3>
-                  
                 </div>
               </article>
               <article>
-                <img src="../git.png" alt="Experience icon" className="icon" />
+                <img src="../git.png" alt="Git icon" className="icon" />
                 <div>
                   <h3>Git</h3>
-                 
                 </div>
               </article>
             </div>
           </div>
         </div>
       </div>
-
-
       <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container">
             <h2 className="experience-sub-title">Other Programming Languages</h2>
             <div className="article-container">
               <article>
-                <img src="../letter-c.png" alt="Experience icon" className="icon" />
+                <img src="../letter-c.png" alt="C icon" className="icon" />
                 <div>
                   <h3>C</h3>
-                  
                 </div>
               </article>
               <article>
-                <img src="../c-.png" alt="Experience icon" className="icon" />
+                <img src="../c-.png" alt="C++ icon" className="icon" />
                 <div>
                   <h3>C++</h3>
-               
                 </div>
               </article>
               <article>
-                <img src="../java.png" alt="Experience icon" className="icon" />
+                <img src="../java.png" alt="Java icon" className="icon" />
                 <div>
                   <h3>Java</h3>
-                  
                 </div>
               </article>
-             
             </div>
           </div>
-          
         </div>
       </div>
-
-
-    
     </section>
   );
 }

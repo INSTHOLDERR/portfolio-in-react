@@ -1,0 +1,392 @@
+/* ================= PROFILE IMAGE ================= */
+.self {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.self:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= PROFILE SECTION ================= */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+
+/* ================= IMAGE CONTAINER ================= */
+.section__pic-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-shrink: 0;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+/* ================= IMAGE BORDER EFFECT ================= */
+.section__pic-container::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #333, #666, #999);
+  opacity: 0.2;
+  z-index: -1;
+  animation: rotate 4s linear infinite;
+}
+
+/* ================= TEXT SECTION ================= */
+.section__text {
+  text-align: center;
+  animation: slideInRight 0.8s ease-out;
+  cursor: pointer;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  font-size: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+  cursor: pointer;
+}
+
+.section__text h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  animation: titleExpand 0.8s ease-out;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+
+/* ================= BUTTONS ================= */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-color-2 {
+  background: white;
+  border: 2px solid #333;
+  color: #333;
+}
+
+.btn-color-2:hover {
+  background: #333;
+  color: white;
+}
+
+/* ================= SOCIAL ICONS ================= */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: fadeIn 1s ease-out 0.4s backwards;
+}
+
+#socials-container .icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: bounceIn 0.5s ease-out backwards;
+}
+
+#socials-container .icon:nth-child(1) { animation-delay: 0.6s; }
+#socials-container .icon:nth-child(2) { animation-delay: 0.7s; }
+
+#socials-container .icon:hover {
+  transform: translateY(-3px) rotate(15deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleExpand {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0) rotate(-90deg); }
+  60% { transform: scale(1.1) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1400px) {
+  #profile { gap: 3rem; }
+  .section__pic-container { width: 350px; height: 350px; }
+}
+
+@media (max-width: 1200px) {
+  #profile { flex-direction: column; gap: 2rem; }
+  .section__pic-container { width: 280px; height: 280px; }
+  .section__text h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .section__pic-container { width: 220px; height: 220px; }
+  .section__pic-container::before { inset: -8px; animation-duration: 6s; }
+  .section__text h1 { font-size: 2rem; }
+  .section__text__p2 { font-size: 1.5rem; }
+  .btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .section__pic-container { /* ================= PROFILE IMAGE ================= */
+.self {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.self:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= PROFILE SECTION ================= */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+
+/* ================= IMAGE CONTAINER ================= */
+.section__pic-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-shrink: 0;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+/* ================= IMAGE BORDER EFFECT ================= */
+.section__pic-container::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #333, #666, #999);
+  opacity: 0.2;
+  z-index: -1;
+  animation: rotate 4s linear infinite;
+}
+
+/* ================= TEXT SECTION ================= */
+.section__text {
+  text-align: center;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  font-size: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.section__text h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  animation: titleExpand 0.8s ease-out;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+
+/* ================= BUTTONS ================= */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-color-2 {
+  background: white;
+  border: 2px solid #333;
+  color: #333;
+}
+
+.btn-color-2:hover {
+  background: #333;
+  color: white;
+}
+
+/* ================= SOCIAL ICONS ================= */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: fadeIn 1s ease-out 0.4s backwards;
+}
+
+#socials-container .icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: bounceIn 0.5s ease-out backwards;
+}
+
+#socials-container .icon:nth-child(1) { animation-delay: 0.6s; }
+#socials-container .icon:nth-child(2) { animation-delay: 0.7s; }
+
+#socials-container .icon:hover {
+  transform: translateY(-3px) rotate(15deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleExpand {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0) rotate(-90deg); }
+  60% { transform: scale(1.1) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1400px) {
+  #profile { gap: 3rem; }
+  .section__pic-container { width: 350px; height: 350px; }
+}
+
+@media (max-width: 1200px) {
+  #profile { flex-direction: column; gap: 2rem; }
+  .section__pic-container { width: 280px; height: 280px; }
+  .section__text h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .section__pic-container { width: 220px; height: 220px; }
+  .section__pic-container::before { inset: -8px; animation-duration: 6s; }
+  .section__text h1 { font-size: 2rem; }
+  .section__text__p2 { font-size: 1.5rem; }
+  .btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  /* .section__pic-container { width: 180px; height: 180px; } */
+  .self{
+    width: auto;
+    height: 46vw;
+}
+  .self:hover { transform: none; }
+}
+
+@media (max-width: 400px) {
+  .section__pic-container { width: 150px; height: 150px; }
+  .section__pic-container::before { inset: -5px; }
+  .section__text h1 { font-size: 1.5rem; }
+}
+ }
+  .self:hover { transform: none; }
+}
+
+@media (max-width: 400px) {
+  .section__pic-container { width: 150px; height: 150px; }
+  .section__pic-container::before { inset: -5px; }
+  .section__text h1 { font-size: 1.5rem; }
+}

@@ -1,44 +1,62 @@
 import React from 'react';
-import '../App.css'; // Make sure to create and import the appropriate CSS file
+import '../styles/Projects.css';
 
 const projects = [
   {
-    title: "Spotify Clone",
-    imgSrc: "../music.png",
-    githubLink: "https://github.com/INSTHOLDERR/spotify-clone",
+    title: "Manmode",
+    imgSrc: "../manmode.png",
+    githubLink: "https://github.com/INSTHOLDERR/ManMode",
   },
   {
-    title: "E-commerce Website",
+    title: "Musify",
+    imgSrc: "../music.png",
+    githubLink: "https://github.com/INSTHOLDERR/musify",
+  },
+  {
+    title: "K-mart",
     imgSrc: "../e-commerce.png",
-    githubLink: "https://github.com/INSTHOLDERR/e-commerce-app",
+    githubLink: "https://github.com/INSTHOLDERR/k-mart",
   },
   {
     title: "Blog App",
     imgSrc: "../blog.png",
-    githubLink: "https://github.com/INSTHOLDERR/blog-app-",
+    githubLink: "https://github.com/INSTHOLDERR/Blog-App",
   },
+    {
+    title: "Weather App",
+    imgSrc: "../weather.png",
+    githubLink: "https://github.com/INSTHOLDERR/weather-app-with-api",
+  }
 ];
 
 const projects2 = [
-    {
-      title: "Chat App",
-      imgSrc: "../chat.png",
-      githubLink: "https://github.com/INSTHOLDERR/chatapp-with-node-and-react",
-    },
-    {
-      title: "Weather App",
-      imgSrc: "../weather.png",
-      githubLink: "https://github.com/INSTHOLDERR/weather-app-with-api",
-    },
-    {
-      title: "To-Do List",
-      imgSrc: "../todo.png",
-      githubLink: "https://github.com/INSTHOLDERR/todo-list-with-react",
-    },
-    
-    
-  
-  ];
+  {
+    title: "Chat App",
+    imgSrc: "../chat.png",
+    githubLink: "https://github.com/INSTHOLDERR/chatapp-with-node-and-react",
+  },
+  {
+    title: "To-Do List",
+    imgSrc: "../todo.png",
+    githubLink: "https://github.com/INSTHOLDERR/todo-list-with-react",
+  },
+
+   {
+    title: "OlX Clone",
+    imgSrc: "../olx.png",
+    githubLink: "https://github.com/INSTHOLDERR/olx-clone-with-react-firebase",
+  },
+  {
+    title: "Netflix Clone",
+    imgSrc: "../netflix.jpg",
+    githubLink: "https://github.com/INSTHOLDERR/netflix-clone-with-firebase",
+  },
+   {
+    title: "Supra",
+    imgSrc: "../supra.jpg",
+    githubLink: "https://github.com/INSTHOLDERR/Supra-web-page-",
+  }
+];
 
 function Projects() {
   return (
@@ -64,13 +82,10 @@ function Projects() {
                 >
                   Github
                 </button>
-              
               </div>
             </div>
           ))}
         </div>
-
-
         <div className="about-containers">
           {projects2.map((project, index) => (
             <div key={index} className="details-container color-container">
@@ -89,13 +104,10 @@ function Projects() {
                 >
                   Github
                 </button>
-                
               </div>
             </div>
           ))}
         </div>
-
-
       </div>
     </section>
   );

@@ -1,0 +1,141 @@
+footer {
+  height: auto;
+  margin: 0 1rem;
+  padding: 2rem 0;
+  animation: fadeIn 0.8s ease-out 0.3s backwards;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+  animation: lineExpand 1s ease-out 0.6s forwards;
+}
+
+@keyframes lineExpand {
+  to {
+    width: 200px;
+  }
+}
+
+footer p {
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+footer p:hover {
+  color: #333;
+  transform: scale(1.03);
+  cursor: default;
+}
+
+footer p::after {
+  content: "❤️";
+  opacity: 0;
+  margin-left: 5px;
+  transition: opacity 0.3s ease;
+}
+
+footer p:hover::after {
+  opacity: 1;
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+footer nav {
+  height: fit-content;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  footer {
+    animation: fadeIn 0.6s ease-out 0.2s backwards;
+  }
+  
+  footer::before {
+    animation: lineExpand 0.8s ease-out 0.4s forwards;
+  }
+  
+  footer p:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: auto;
+    padding: 1.5rem 0;
+    animation: fadeIn 0.5s ease-out 0.1s backwards;
+  }
+  
+  footer nav {
+    margin-bottom: 2rem;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  footer::before {
+    animation: lineExpand 0.6s ease-out 0.3s forwards;
+  }
+  
+  @keyframes lineExpand {
+    to {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    padding: 1rem 0;
+    margin: 0 0.5rem;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+  }
+  
+  footer p:hover {
+    transform: scale(1.01);
+  }
+  
+  footer::before {
+    animation: lineExpand 0.5s ease-out 0.2s forwards;
+  }
+  
+  @keyframes lineExpand {
+    to {
+      width: 120px;
+    }
+  }
+}

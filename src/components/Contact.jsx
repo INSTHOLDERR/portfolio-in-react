@@ -7,8 +7,7 @@ import {
   faLinkedin,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
-import "../App.css";
-import { width } from "@fortawesome/free-brands-svg-icons/fa500px";
+import '../styles/Contact.css';
 
 function Contact() {
   return (
@@ -64,15 +63,12 @@ function Contact() {
                 href="https://leetcode.com/u/pQjGQVL0dO/"
                 target="_blank"
                 rel="noopener noreferrer"
-
               >
-              <img
-  src="https://leetcode.com/favicon.ico"
-  alt="LeetCode"
-  className="custom-icon"
-  style={{ width: "20px", height: "20px" }}
-/>
-
+                <img
+                  src="https://leetcode.com/favicon.ico"
+                  alt="LeetCode"
+                  className="custom-icon"
+                />
               </a>
             </li>
           </ul>
