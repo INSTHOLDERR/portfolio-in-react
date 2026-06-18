@@ -19,7 +19,12 @@ function Contact() {
           <ul className="wrapper">
             <li className="icon gmail">
               <span className="tooltip">Gmail</span>
-              <a href="mailto:nikhilpramod425@gmail.com" className="icon-alink">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=nikhilpramod425@gmail.com"
+                className="icon-alink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faGoogle} />
               </a>
             </li>
