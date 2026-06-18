@@ -12,6 +12,19 @@ function SkillIcon({ src, alt, label }) {
   );
 }
 
+// Fallback for skills with no reliable official logo available (e.g. Zustand) —
+// keeps the same card shape/sizing so it sits consistently among icon-based skills.
+function SkillIconText({ label }) {
+  return (
+    <article>
+      <div className="icon icon-text-badge">{label.slice(0, 2).toUpperCase()}</div>
+      <div>
+        <h3>{label}</h3>
+      </div>
+    </article>
+  );
+}
+
 function Experience() {
   return (
     <section id="experience">
@@ -59,9 +72,24 @@ function Experience() {
               <SkillIcon src="../skills/aws.svg" alt="AWS icon" label="AWS" />
               <SkillIcon src="../skills/googlecloud.svg" alt="Google Cloud icon" label="Google Cloud" />
               <SkillIcon src="../skills/firebase.svg" alt="Firebase icon" label="Firebase" />
+              <SkillIcon src="../skills/netlify.svg" alt="Netlify icon" label="Netlify" />
             </div>
           </div>
 
+          <div className="details-container">
+            <h2 className="experience-sub-title">Libraries &amp; Real-Time</h2>
+            <div className="article-container">
+              <SkillIconText label="Zustand" />
+              <SkillIcon src="../skills/socketio.svg" alt="Socket.IO icon" label="Socket.IO" />
+              <SkillIcon src="../skills/daisyui.svg" alt="DaisyUI icon" label="DaisyUI" />
+              <SkillIcon src="../skills/cloudinary.svg" alt="Cloudinary icon" label="Cloudinary" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="experience-details-container">
+        <div className="about-containers">
           <div className="details-container">
             <h2 className="experience-sub-title">Other Languages &amp; Tools</h2>
             <div className="article-container">
