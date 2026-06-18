@@ -69,24 +69,24 @@ article:hover .icon {
   animation: iconGlow 2s ease-in-out infinite;
 }
 
-/* Text-badge fallback for skills with no available official logo (e.g. Zustand) */
-.icon.icon-text-badge {
-  width: 2.75rem;
-  height: 2.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-grad-start), var(--accent-grad-end));
-  color: var(--bg-card);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+/* Socket.IO's official logo is solid black with no colored variant —
+   flip it to white in dark mode so it stays visible on dark cards. */
+[data-theme="dark"] article .icon.icon-socketio {
+  filter: brightness(0) invert(1);
 }
 
-article:hover .icon.icon-text-badge {
-  transform: rotateY(360deg);
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+[data-theme="dark"] article:hover .icon.icon-socketio {
+  filter: brightness(0) invert(1) drop-shadow(0 5px 10px rgba(255, 255, 255, 0.25));
+}
+
+/* Socket.IO's mark is baked in as dark navy directly in the SVG file,
+   so it needs a filter swap (not a CSS color) to read clearly on dark cards. */
+[data-theme="dark"] article .icon[alt="Socket.IO icon"] {
+  filter: grayscale(20%) brightness(0) invert(1);
+}
+
+[data-theme="dark"] article:hover .icon[alt="Socket.IO icon"] {
+  filter: grayscale(0%) brightness(0) invert(1) drop-shadow(0 5px 10px rgba(255, 255, 255, 0.25));
 }
 
 /* ================= TEXT ================= */

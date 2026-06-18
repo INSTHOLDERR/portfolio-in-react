@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 
+// Nav link data, kept in one place so the markup below just maps over it.
+const NAV_LINKS = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen((open) => !open);
 
   return (
-    <div id='home'>
+    <div id="home">
       <nav id="desktop-nav">
         <div className="logo"><a href="#home">Nikhil P</a></div>
         <div>
           <ul className="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
@@ -30,10 +36,11 @@ function Navbar() {
             <span></span>
           </div>
           <div className={`menu-links ${menuOpen ? 'open' : ''}`}>
-            <li><a href="#about" onClick={toggleMenu}>About</a></li>
-            <li><a href="#experience" onClick={toggleMenu}>Skills</a></li>
-            <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} onClick={toggleMenu}>{link.label}</a>
+              </li>
+            ))}
           </div>
         </div>
       </nav>

@@ -1,23 +1,10 @@
 import React from 'react';
 import '../styles/Experience.css';
 
-function SkillIcon({ src, alt, label }) {
+function SkillIcon({ src, alt, label, iconClass }) {
   return (
     <article>
-      <img src={src} alt={alt} className="icon" />
-      <div>
-        <h3>{label}</h3>
-      </div>
-    </article>
-  );
-}
-
-// Fallback for skills with no reliable official logo available (e.g. Zustand) —
-// keeps the same card shape/sizing so it sits consistently among icon-based skills.
-function SkillIconText({ label }) {
-  return (
-    <article>
-      <div className="icon icon-text-badge">{label.slice(0, 2).toUpperCase()}</div>
+      <img src={src} alt={alt} className={`icon${iconClass ? ` ${iconClass}` : ''}`} />
       <div>
         <h3>{label}</h3>
       </div>
@@ -79,8 +66,8 @@ function Experience() {
           <div className="details-container">
             <h2 className="experience-sub-title">Libraries &amp; Real-Time</h2>
             <div className="article-container">
-              <SkillIconText label="Zustand" />
-              <SkillIcon src="../skills/socketio.svg" alt="Socket.IO icon" label="Socket.IO" />
+              <SkillIcon src="../skills/zustand.svg" alt="Zustand icon" label="Zustand" />
+              <SkillIcon src="../skills/socketio.svg" alt="Socket.IO icon" label="Socket.IO" iconClass="icon-socketio" />
               <SkillIcon src="../skills/daisyui.svg" alt="DaisyUI icon" label="DaisyUI" />
               <SkillIcon src="../skills/cloudinary.svg" alt="Cloudinary icon" label="Cloudinary" />
             </div>
