@@ -76,7 +76,7 @@
 .text-container p::first-letter {
   font-size: 2em;
   font-weight: bold;
-  color: #333;
+  color: var(--accent-solid);
   float: left;
   margin-right: 8px;
   line-height: 1;
@@ -217,7 +217,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .about-pick{
+    .about-pic{
         width: auto;
     height: 46vw;
     justify-content: center;
@@ -274,5 +274,42 @@
   
   .details-container .icon:hover {
     transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .text-container p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .details-container {
+    padding: 0.85rem;
+  }
+
+  .details-container h3 {
+    font-size: 0.9rem;
+  }
+
+  .details-container p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text-container {
+    padding: 0 0.5rem;
+  }
+
+  .text-container p {
+    font-size: 0.8rem;
+  }
+
+  .text-container p::first-letter {
+    font-size: 1.3em;
+  }
+
+  .details-container {
+    padding: 0.7rem;
   }
 }

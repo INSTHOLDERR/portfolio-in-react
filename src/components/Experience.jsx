@@ -1,108 +1,75 @@
 import React from 'react';
 import '../styles/Experience.css';
 
+function SkillIcon({ src, alt, label }) {
+  return (
+    <article>
+      <img src={src} alt={alt} className="icon" />
+      <div>
+        <h3>{label}</h3>
+      </div>
+    </article>
+  );
+}
+
 function Experience() {
   return (
     <section id="experience">
       <p className="section__text__p1">Explore My</p>
       <h1 className="title">Skills</h1>
+
       <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container">
-            <h2 className="experience-sub-title">Frontend Development</h2>
+            <h2 className="experience-sub-title">Front-End Development</h2>
             <div className="article-container">
-              <article>
-                <img src="../html-5.png" alt="HTML icon" className="icon" />
-                <div>
-                  <h3>HTML</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../css-3.png" alt="CSS icon" className="icon" />
-                <div>
-                  <h3>CSS</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../java-script.png" alt="JavaScript icon" className="icon" />
-                <div>
-                  <h3>JavaScript</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../react(1).png" alt="React icon" className="icon" />
-                <div>
-                  <h3>React JS</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../tailwind-css.png" alt="Tailwind icon" className="icon" />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../bootstrap.png" alt="Bootstrap icon" className="icon" />
-                <div>
-                  <h3>Bootstrap</h3>
-                </div>
-              </article>
+              <SkillIcon src="../html-5.png" alt="HTML icon" label="HTML" />
+              <SkillIcon src="../css-3.png" alt="CSS icon" label="CSS" />
+              <SkillIcon src="../java-script.png" alt="JavaScript icon" label="JavaScript" />
+              <SkillIcon src="../skills/typescript.svg" alt="TypeScript icon" label="TypeScript" />
+              <SkillIcon src="../react(1).png" alt="React icon" label="React JS" />
+              <SkillIcon src="../skills/redux.svg" alt="Redux icon" label="Redux" />
+              <SkillIcon src="../tailwind-css.png" alt="Tailwind icon" label="Tailwind CSS" />
+              <SkillIcon src="../bootstrap.png" alt="Bootstrap icon" label="Bootstrap" />
             </div>
           </div>
+
           <div className="details-container">
-            <h2 className="experience-sub-title">Backend Development</h2>
+            <h2 className="experience-sub-title">Back-End Development</h2>
             <div className="article-container">
-              <article>
-                <img src="../node-js.png" alt="Node JS icon" className="icon" />
-                <div>
-                  <h3>Node JS</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../express.png" alt="Express icon" className="icon" />
-                <div>
-                  <h3>Express JS</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../mongodb.png" alt="MongoDB icon" className="icon" />
-                <div>
-                  <h3>MongoDB</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../git.png" alt="Git icon" className="icon" />
-                <div>
-                  <h3>Git</h3>
-                </div>
-              </article>
+              <SkillIcon src="../node-js.png" alt="Node JS icon" label="Node JS" />
+              <SkillIcon src="../express.png" alt="Express icon" label="Express JS" />
+              <SkillIcon src="../mongodb.png" alt="MongoDB icon" label="MongoDB" />
+              <SkillIcon src="../skills/mysql.svg" alt="MySQL icon" label="MySQL" />
+              <SkillIcon src="../skills/redis.svg" alt="Redis icon" label="Redis" />
             </div>
           </div>
         </div>
       </div>
+
       <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container">
-            <h2 className="experience-sub-title">Other Programming Languages</h2>
+            <h2 className="experience-sub-title">Tools &amp; Platforms</h2>
             <div className="article-container">
-              <article>
-                <img src="../letter-c.png" alt="C icon" className="icon" />
-                <div>
-                  <h3>C</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../c-.png" alt="C++ icon" className="icon" />
-                <div>
-                  <h3>C++</h3>
-                </div>
-              </article>
-              <article>
-                <img src="../java.png" alt="Java icon" className="icon" />
-                <div>
-                  <h3>Java</h3>
-                </div>
-              </article>
+              <SkillIcon src="../git.png" alt="Git icon" label="Git" />
+              <SkillIcon src="../skills/githublogo.svg" alt="GitHub icon" label="GitHub" />
+              <SkillIcon src="../skills/postman.svg" alt="Postman icon" label="Postman" />
+              <SkillIcon src="../skills/vscode.svg" alt="VS Code icon" label="VS Code" />
+              <SkillIcon src="../skills/aws.svg" alt="AWS icon" label="AWS" />
+              <SkillIcon src="../skills/googlecloud.svg" alt="Google Cloud icon" label="Google Cloud" />
+              <SkillIcon src="../skills/firebase.svg" alt="Firebase icon" label="Firebase" />
+            </div>
+          </div>
+
+          <div className="details-container">
+            <h2 className="experience-sub-title">Other Languages &amp; Tools</h2>
+            <div className="article-container">
+              <SkillIcon src="../letter-c.png" alt="C icon" label="C" />
+              <SkillIcon src="../c-.png" alt="C++ icon" label="C++" />
+              <SkillIcon src="../java.png" alt="Java icon" label="Java" />
+              <SkillIcon src="../skills/androidstudio.svg" alt="Android Studio icon" label="Android Studio" />
+              <SkillIcon src="../skills/netbeans.svg" alt="NetBeans icon" label="NetBeans" />
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Projects.css';
+import projectDetails from '../data/projectDetails';
+import ProjectModal from './ProjectModal';
 
 const projects = [
   {
@@ -8,7 +10,7 @@ const projects = [
     githubLink: "https://github.com/INSTHOLDERR/ManMode",
   },
   {
-    title: "Musify",
+    title: "Musiffy",
     imgSrc: "../music.png",
     githubLink: "https://github.com/INSTHOLDERR/musify",
   },
@@ -18,30 +20,29 @@ const projects = [
     githubLink: "https://github.com/INSTHOLDERR/k-mart",
   },
   {
-    title: "Blog App",
+    title: "BlogSpace",
     imgSrc: "../blog.png",
     githubLink: "https://github.com/INSTHOLDERR/Blog-App",
   },
-    {
-    title: "Weather App",
-    imgSrc: "../weather.png",
-    githubLink: "https://github.com/INSTHOLDERR/weather-app-with-api",
-  }
+  {
+    title: "Chate",
+    imgSrc: "../chat.png",
+    githubLink: "https://github.com/INSTHOLDERR/chate-using-socket.io",
+  },
 ];
 
 const projects2 = [
   {
-    title: "Chat App",
-    imgSrc: "../chat.png",
-    githubLink: "https://github.com/INSTHOLDERR/chatapp-with-node-and-react",
+    title: "Weather App",
+    imgSrc: "../weather.png",
+    githubLink: "https://github.com/INSTHOLDERR/weather-app-with-api",
   },
   {
     title: "To-Do List",
     imgSrc: "../todo.png",
     githubLink: "https://github.com/INSTHOLDERR/todo-list-with-react",
   },
-
-   {
+  {
     title: "OlX Clone",
     imgSrc: "../olx.png",
     githubLink: "https://github.com/INSTHOLDERR/olx-clone-with-react-firebase",
@@ -51,14 +52,51 @@ const projects2 = [
     imgSrc: "../netflix.jpg",
     githubLink: "https://github.com/INSTHOLDERR/netflix-clone-with-firebase",
   },
-   {
+  {
     title: "Supra",
     imgSrc: "../supra.jpg",
     githubLink: "https://github.com/INSTHOLDERR/Supra-web-page-",
-  }
+  },
 ];
 
+function ProjectCard({ project, onOpenDetails }) {
+  const hasDetails = Boolean(projectDetails[project.title]);
+
+  return (
+    <div className="details-container color-container">
+      <div
+        className={`article-container${hasDetails ? ' has-details' : ''}`}
+        onClick={() => hasDetails && onOpenDetails(project)}
+        role={hasDetails ? 'button' : undefined}
+        tabIndex={hasDetails ? 0 : undefined}
+        aria-label={hasDetails ? `View details for ${project.title}` : undefined}
+        onKeyDown={(e) => {
+          if (hasDetails && (e.key === 'Enter' || e.key === ' ')) onOpenDetails(project);
+        }}
+      >
+        <img src={project.imgSrc} alt={project.title} className="project-img" />
+        {hasDetails && (
+          <div className="project-hover-hint">
+            <span>View Details</span>
+          </div>
+        )}
+      </div>
+      <h2 className="experience-sub-title project-title">{project.title}</h2>
+      <div className="btn-container">
+        <button
+          className="btn btn-color-2 project-btn"
+          onClick={() => window.open(project.githubLink, '_blank', 'noopener,noreferrer')}
+        >
+          Github
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function Projects() {
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
     <section id="projects">
       <p className="section__text__p1">Browse My Recent</p>
@@ -66,49 +104,23 @@ function Projects() {
       <div className="experience-details-container">
         <div className="about-containers">
           {projects.map((project, index) => (
-            <div key={index} className="details-container color-container">
-              <div className="article-container">
-                <img
-                  src={project.imgSrc}
-                  alt={project.title}
-                  className="project-img"
-                />
-              </div>
-              <h2 className="experience-sub-title project-title">{project.title}</h2>
-              <div className="btn-container">
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() => window.location.href = project.githubLink}
-                >
-                  Github
-                </button>
-              </div>
-            </div>
+            <ProjectCard key={index} project={project} onOpenDetails={setActiveProject} />
           ))}
         </div>
         <div className="about-containers">
           {projects2.map((project, index) => (
-            <div key={index} className="details-container color-container">
-              <div className="article-container">
-                <img
-                  src={project.imgSrc}
-                  alt={project.title}
-                  className="project-img"
-                />
-              </div>
-              <h2 className="experience-sub-title project-title">{project.title}</h2>
-              <div className="btn-container">
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() => window.location.href = project.githubLink}
-                >
-                  Github
-                </button>
-              </div>
-            </div>
+            <ProjectCard key={index} project={project} onOpenDetails={setActiveProject} />
           ))}
         </div>
       </div>
+
+      {activeProject && (
+        <ProjectModal
+          project={activeProject}
+          details={projectDetails[activeProject.title]}
+          onClose={() => setActiveProject(null)}
+        />
+      )}
     </section>
   );
 }

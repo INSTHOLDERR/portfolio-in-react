@@ -7,7 +7,7 @@
 
 /* ================= SECTION TITLE ================= */
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -69,7 +69,7 @@ article h3 {
 }
 
 article:hover h3 {
-  color: #333;
+  color: var(--accent-solid);
   font-weight: 600;
 }
 
@@ -193,5 +193,50 @@ article:hover h3 {
 
   .experience-sub-title {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .article-container {
+    gap: 0.75rem;
+  }
+
+  article {
+    width: 4.6rem;
+  }
+
+  article h3 {
+    font-size: 0.72rem;
+  }
+
+  article .icon {
+    height: 1.5rem;
+  }
+
+  .details-container {
+    padding: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .article-container {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  article {
+    width: 4rem;
+  }
+
+  article h3 {
+    font-size: 0.65rem;
+  }
+
+  article .icon {
+    height: 1.3rem;
+  }
+
+  .details-container {
+    padding: 0.65rem;
   }
 }

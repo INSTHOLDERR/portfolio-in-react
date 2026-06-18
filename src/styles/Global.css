@@ -1,5 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* ================= THEME TOKENS ================= */
+:root {
+  --bg-main: #ffffff;
+  --bg-card: rgb(250, 250, 250);
+  --bg-elevated: #ffffff;
+  --text-primary: #0d0d0d;
+  --text-secondary: rgb(85, 85, 85);
+  --text-muted: rgb(110, 110, 110);
+  --border-color: rgb(163, 163, 163);
+  --border-color-soft: rgb(210, 210, 210);
+  --accent-grad-start: #333;
+  --accent-grad-end: #666;
+  --accent-solid: #333;
+  --btn-fill-bg: rgb(53, 53, 53);
+  --btn-fill-text: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.12);
+  --overlay-bg: rgba(20, 20, 20, 0.55);
+  --icon-filter: none;
+  --theme-toggle-icon: "🌙";
+}
+
+[data-theme="dark"] {
+  --bg-main: #121212;
+  --bg-card: #1c1c1e;
+  --bg-elevated: #232325;
+  --text-primary: #f2f2f2;
+  --text-secondary: rgb(190, 190, 190);
+  --text-muted: rgb(150, 150, 150);
+  --border-color: rgb(80, 80, 80);
+  --border-color-soft: rgb(70, 70, 70);
+  --accent-grad-start: #e2e2e2;
+  --accent-grad-end: #9a9a9a;
+  --accent-solid: #e2e2e2;
+  --btn-fill-bg: rgb(230, 230, 230);
+  --btn-fill-text: #121212;
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --icon-filter: invert(1) brightness(1.4);
+}
+
+html {
+  background: var(--bg-main);
+  transition: background 0.35s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +54,9 @@
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  transition: background 0.35s ease, color 0.35s ease;
 }
 
 html {
@@ -16,7 +64,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
 }
 
 a,
@@ -25,16 +73,16 @@ a,
 }
 
 a {
-  color: black;
+  color: var(--text-primary);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--bg-main);
 }
 
 a:hover {
-  color: grey;
+  color: var(--text-muted);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--border-color);
 }
 
 *:focus,
@@ -117,7 +165,7 @@ section {
   font-size: 3rem;
   text-align: center;
   animation: slideInLeft 0.6s ease-out;
-  background: linear-gradient(45deg, #333, #666);
+  background: linear-gradient(45deg, var(--accent-grad-start), var(--accent-grad-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -127,30 +175,30 @@ section {
   cursor: pointer;
   height: 2rem;
   transition: transform 0.3s ease, filter 0.3s ease;
+  filter: var(--icon-filter);
 }
 
 .icon:hover {
   transform: scale(1.15);
-  filter: brightness(1.1);
+  filter: var(--icon-filter) brightness(1.1);
 }
 
 /* Common Containers */
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--bg-card);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border-color) 0.1rem solid;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.35s ease;
   animation: scaleIn 0.5s ease-out;
 }
 
 .details-container:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  border-color: rgb(100, 100, 100);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border-color: var(--accent-solid);
 }
 
 .about-containers {
@@ -198,32 +246,35 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--btn-fill-bg) 0.1rem solid;
 }
 
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--btn-fill-bg);
+  color: var(--btn-fill-text);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: var(--accent-solid);
+  filter: brightness(0.85);
 }
 
 .btn-color-2 {
   background: none;
+  color: var(--text-primary);
+  border-color: var(--border-color);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--btn-fill-bg) 0.1rem solid;
 }
 
 /* Responsive Global Styles */
@@ -298,6 +349,57 @@ section {
   .btn:hover::before {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section {
+    margin: 0 4%;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    width: 8.5rem;
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-container {
+    gap: 0.75rem;
+  }
+
+  .btn:hover::before {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section {
+    margin: 0 0.75rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 11rem;
+    padding: 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-container {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .details-container {
+    padding: 1rem;
   }
 }
 
